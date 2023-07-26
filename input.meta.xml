@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meta>
+<!-- depositor email  -->
+<email_address>##Email_Address##</email_address>
+<!-- depositor name  -->
+<depositor>##Depositor_Name##</depositor>
+<!-- tdm_formats  -->
+<tdm_formats/>
+<!-- licenses  -->
+<license_ref applies_to="vor"/>	
+<vor_lic_start_date/>
+<license_ref applies_to="tdm"/>	
+<tdm_lic_start_date/>	
+<!-- resource  -->
+<resource content_version="vor" mime_type="application/pdf"/>
+</meta>
