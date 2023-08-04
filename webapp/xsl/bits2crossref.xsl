@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <!-- ========================================================================== -->
-<!-- XSL Name         : BITS2CrossRef.xsl (version 1.0)                          -->
-<!-- Created By       : ZB MED Information Centre for Life Sciences                                -->
-<!-- Purpose          : To extract metadata for CrossRef from BITS coded XML   -->
-<!-- Creation Date    : June 27, 2023                                            -->
-<!-- Command Line     : java -jar saxon8.jar input.xml BITS2CrossRef.xsl         -->
+<!-- XSL Name         : BITS2CrossRef.xsl (version 1.0)                         -->
+<!-- Created By       : ZB MED Information Centre for Life Sciences             -->
+<!-- Purpose          : To extract metadata for CrossRef from BITS coded XML    -->
+<!-- Creation Date    : June 27, 2023                                           -->
+<!-- Command Line     : java -jar saxon8.jar input.xml BITS2CrossRef.xsl        -->
 <!--                     meta=input_meta.xml >output.xml                      	-->
 <!--                                                      						-->
 <!-- ========================================================================== -->
