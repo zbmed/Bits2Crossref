@@ -20,3 +20,10 @@ function e:bits2crossref($xml as item())
   )
   else (error(xs:QName("basex:error"),'Input must be supplied as a string or XML document.'))
 };
+
+
+declare function e:strip-preamble($xml){
+  if (contains($xml,'<?covid-19-tdm ?>'))
+    then ('<?covid-19-tdm'||substring-after($xml,'<?covid-19-tdm'))
+  else ('<article'||substring-after($xml,'<article'))
+};
