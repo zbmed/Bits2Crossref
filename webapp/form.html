@@ -1,9 +1,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>HTML Upload</title>
+        <script src="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone-min.js"></script>
+        <link href="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <form enctype="multipart/form-data" method="post" action="/bits2crossref">
+        <form enctype="multipart/form-data" method="post" action="/bits2crossref" class="dropzone" id="my-dropzone">
             <fieldset>
                 <legend>Upload Document:</legend>
                 <input type="file" name="file"/>
