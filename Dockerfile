@@ -13,5 +13,7 @@ RUN ls -l /usr/src/basex/basex-api/lib/
 
 USER basex
 COPY ./webapp /srv/basex/webapp
+
 COPY ./.basex /srv/basex
 RUN ls -l /srv/basex/webapp
+RUN ls -l /srv/basex/webapp/WEB-INF
