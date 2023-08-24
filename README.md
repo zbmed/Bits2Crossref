@@ -1,6 +1,6 @@
 # Bits2Crossref
 
-`coming soon`
+`preview`
 
 
 
