@@ -1,4 +1,4 @@
-FROM basex/basexhttp:latest
+FROM basex/basexhttp:9.6
 ARG SAXON_VERSION=10.6
 
 USER root
