@@ -1,22 +1,37 @@
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>BITS2Crossref demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"  />
   </head>
-  <body>
+  <body><center>
     <div class="jumbotron">
         <form enctype="multipart/form-data" method="post" action="/bits2crossref">
-            <fieldset>
-                <legend>Upload Document:</legend>
-                <input class="w-50 form-control input-lg" type="file" name="file"/>
-                <input class="w-50 form-control input-lg" type="submit" value="Upload"/>
-            </fieldset>
-        </form>
-    </div>
-       
+            
+        
+    <div class="w-75 input-group">
+        <input class="form-control input-lg" type="file" name="file"/>       
+         <div class="input-group-append">
+            <input class="form-control input-lg btn btn-outline-secondary" type="submit" value="Upload"/>
+          <button type="button" class="btn btn-outline-secondary">Action</button>
+          <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div role="separator" class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+          </div>
+        </div>
+      </div>
+
+    </form>
+</div>
+</center>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" ></script>
     </body>
 </html>
