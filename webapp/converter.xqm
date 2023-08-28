@@ -7,8 +7,8 @@ function e:bits2crossref($xml as item())
 {
   let $options := map{'indent':'no',
                     'omit-xml-declaration':'no',
-                    'doctype-public':'-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.2 20190208//EN',
-                    'doctype-system':'JATS-archivearticle1-mathml3.dtd'}
+                    'doctype-public':'-//NLM//DTD BITS Book Interchange DTD with OASIS and XHTML Tables v2.0 20151225//EN',
+                    'doctype-system':'BITS-book2-1.dtd'}
   let $xsl := doc('./xsl/bits2crossref.xsl')
   return 
   if ($xml[.instance of xs:string]) then (
