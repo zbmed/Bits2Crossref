@@ -28,7 +28,8 @@
 
 	<!-- One of these two fields must be populated -->
 	<xsl:param name="metaContents" as="node()*" />
-	<xsl:param name="meta" as="xs:string" select="''"/>
+
+	<xsl:param name="meta" as="xs:string" select="'input.meta.xml'"/>
 	<xsl:variable name="metafile">
 		<xsl:if test="empty($metaContents) and $meta=''">
 			<xsl:message terminate="yes">Must specify meta information - either as a nodeset in 'metaContents' or as a filename via 'meta'</xsl:message>
@@ -52,12 +53,11 @@
 					<xsl:attribute name="xsi:schemaLocation">http://www.crossref.org/schema/4.3.6 http://www.crossref.org/schema/deposit/crossref4.3.6.xsd</xsl:attribute>
 				<head>
 					<xsl:apply-templates select="//front"/>
-
 				</head>
 				<body>
 					<book>
 						<xsl:apply-templates select="//book-meta"/>
-											
+						<xsl:apply-templates select="//ref-list"/>					
 					</book>
 				</body>
 			</doi_batch>
@@ -236,115 +236,27 @@
 <!-- ========================================================================== -->
 <xsl:template match="ref-list">
 	<citation_list>
-		<xsl:apply-templates select="ref"/>
+		<xsl:apply-templates select="//citation-alternatives"/>
 	</citation_list>
 </xsl:template>
 
+
+
 <xsl:template match="ref/citation-alternatives">
-	<xsl:variable name="key" select="concat($datetime,'_',@id)"/>
-	<citation>
+	<xsl:variable name="key" select="concat($datetime,'_',../@id)"/>
+
+<citation>
 		<xsl:attribute name="key">key<xsl:value-of select="$key"/></xsl:attribute>
-		<xsl:apply-templates select="element-citation"/>
-		<xsl:apply-templates select="citation"/>
-		<xsl:apply-templates select="nlm-citation"/>
+		
 		<xsl:apply-templates select="mixed-citation"/>
 	</citation>
 </xsl:template>
-
-<xsl:template match="element-citation | citation | nlm-citation | mixed-citation">
-	<xsl:choose>
-		<xsl:when test="@publication-type='journal' or @citation-type='journal'">
-			<xsl:if test="issn">
-				<issn>
-					<xsl:value-of select="//element-citation/issn | //citation/issn | //nlm-citation/issn | //mixed-citation/issn"/>
-				</issn>
-			</xsl:if>
-			<xsl:if test="source">
-				<journal_title>
-					<xsl:apply-templates select="source"/>
-				</journal_title>
-			</xsl:if>
-                        <xsl:choose>
-                            <xsl:when test="person-group">
-				<xsl:apply-templates select="person-group/name|person-group/collab"/>
-                            </xsl:when>
-                            <xsl:when test="string-name">
-				<xsl:apply-templates select="string-name"/>
-                            </xsl:when>
-                            <xsl:when test="collab">
-				<xsl:apply-templates select="collab"/>
-                            </xsl:when>
-                        </xsl:choose>    
-			<xsl:if test="volume">
-				<volume>
-					<xsl:apply-templates select="volume"/>
-				</volume>
-			</xsl:if>
-			<xsl:if test="issue">
-				<issue>
-					<xsl:apply-templates select="issue"/>
-				</issue>
-			</xsl:if>
-			<xsl:if test="fpage">
-				<first_page>
-					<xsl:apply-templates select="fpage"/>
-				</first_page>
-			</xsl:if>
-			<xsl:if test="year">
-				<cYear>
-					<xsl:value-of select="replace(year, '[a-zA-Z]', '')" /> 
-				</cYear>
-			</xsl:if>
-			<xsl:if test="article-title">
-				<article_title>
-					<xsl:apply-templates select="article-title"/>
-				</article_title>
-			</xsl:if>
-		</xsl:when>
-			<xsl:when test="@citation-type = 'book' or @citation-type = 'conf-proceedings' or @citation-type = 'confproc' or @citation-type = 'other' or @publication-type = 'book' or @publication-type = 'conf-proceedings' or @publication-type = 'confproc' or @publication-type = 'other'">
-                        <xsl:choose>
-                            <xsl:when test="person-group">
-				<xsl:apply-templates select="person-group/name|person-group/collab"/>
-                            </xsl:when>
-                            <xsl:when test="string-name">
-				<xsl:apply-templates select="string-name"/>
-                            </xsl:when>
-                            <xsl:when test="collab">
-				<xsl:apply-templates select="collab"/>
-                            </xsl:when>
-                        </xsl:choose>    
-			<xsl:if test="fpage">
-				<first_page>
-					<xsl:apply-templates select="fpage"/>
-				</first_page>
-			</xsl:if>
-			<xsl:if test="year">
-				<cYear>
-					<xsl:value-of select="replace(year, '[a-zA-Z]', '')" /> 
-				</cYear>
-			</xsl:if>
-			<xsl:if test="source">
-				<volume_title>
-					<xsl:apply-templates select="source"/>
-				</volume_title>
-			</xsl:if>
-			<xsl:if test="edition">
-				<edition_number>
-					<xsl:apply-templates select="edition"/>
-				</edition_number>
-			</xsl:if>
-			<xsl:if test="article-title">
-				<article_title>
-					<xsl:apply-templates select="article-title"/>
-				</article_title>
-			</xsl:if>
-		</xsl:when>
-			<xsl:otherwise>
+<xsl:template match="mixed-citation">
+	
 			<unstructured_citation>
-				<xsl:value-of select="."/>
+				<xsl:value-of select="normalize-space(.)"/>
 			</unstructured_citation>
-		</xsl:otherwise>
-	</xsl:choose>
+		
 </xsl:template>
 
 <xsl:template match="back//name">
