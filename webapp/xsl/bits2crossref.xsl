@@ -27,9 +27,17 @@
             encoding="UTF-8"/>
 
 	<!-- One of these two fields must be populated -->
-	<xsl:param name="metaContents" as="node()*" />
+	<xsl:param name="metaContents" as="node()*" >
+	<meta>
+<!-- depositor email  -->
+<email_address>##Email_Address##</email_address>
+<!-- depositor name  -->
+<depositor>##Depositor_Name##</depositor>
 
-	<xsl:param name="meta" as="xs:string" select="input.meta.xml"/>
+</meta>
+	</xsl:param>
+
+	<xsl:param name="meta" as="xs:string" select="'input.meta.xml'"/>
 	<xsl:variable name="metafile">
 		<xsl:if test="empty($metaContents) and $meta=''">
 			<xsl:message terminate="yes">Must specify meta information - either as a nodeset in 'metaContents' or as a filename via 'meta'</xsl:message>
@@ -237,13 +245,13 @@
 <!-- ========================================================================== -->
 <xsl:template match="ref-list">
 	<citation_list>
-		<xsl:apply-templates select="//citation-alternatives"/>
+		<xsl:apply-templates select="//ref"/>
 	</citation_list>
 </xsl:template>
 
 
 
-<xsl:template match="ref/citation-alternatives">
+<xsl:template match="ref">
 	<xsl:variable name="key" select="concat($datetime,'_',../@id)"/>
 
 <citation>
