@@ -29,7 +29,7 @@
 	<!-- One of these two fields must be populated -->
 	<xsl:param name="metaContents" as="node()*" />
 
-	<xsl:param name="meta" as="xs:string" select="'input.meta.xml'"/>
+	<xsl:param name="meta" as="xs:string" select="input.meta.xml"/>
 	<xsl:variable name="metafile">
 		<xsl:if test="empty($metaContents) and $meta=''">
 			<xsl:message terminate="yes">Must specify meta information - either as a nodeset in 'metaContents' or as a filename via 'meta'</xsl:message>
@@ -53,7 +53,8 @@
 					<xsl:attribute name="xsi:schemaLocation">http://www.crossref.org/schema/4.3.6 http://www.crossref.org/schema/deposit/crossref4.3.6.xsd</xsl:attribute>
 				<head>
 					<xsl:apply-templates select="//front"/>
-				</head>
+					
+			</head>
 				<body>
 					<book>
 						<xsl:apply-templates select="//book-meta"/>
@@ -156,7 +157,7 @@
 	</xsl:template>
 
 	<xsl:template match="publisher-name"><publisher_name><xsl:value-of select="."/></publisher_name></xsl:template>
-	<xsl:template match="publisher-loc"><publisher_loc><xsl:value-of select="."/><xsl:apply-templates select="publisher-loc/uri/node()"/></publisher_loc></xsl:template>
+	<xsl:template match="publisher-loc"><publisher_loc><xsl:value-of select="."/><xsl:apply-templates select="uri"/></publisher_loc></xsl:template>
 	<xsl:template match="publisher-loc/uri"><uri><xsl:value-of select="."/></uri></xsl:template>
 
 <!-- ========================================================================== -->
