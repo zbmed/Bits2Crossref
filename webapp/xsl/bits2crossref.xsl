@@ -181,10 +181,10 @@
 			<xsl:apply-templates select="edition"/>
 
 
-			<xsl:if test="../book-part-meta/book-part-id[@book-part-id-type='doi']">
+			<xsl:if test="book-part-meta/book-part-id[@book-part-id-type='doi']">
 				<doi_data>
 					<doi>
-						<xsl:value-of select="../book-part-meta/book-part-id[@book-part-id-type='doi']"/>
+						<xsl:value-of select="book-part-meta/book-part-id[@book-part-id-type='doi']"/>
 					</doi>
 				</doi_data>
 			</xsl:if>
