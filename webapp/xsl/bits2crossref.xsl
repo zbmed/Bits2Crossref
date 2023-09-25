@@ -172,7 +172,7 @@
 	<xsl:template match="publisher-loc/uri"><uri><xsl:value-of select="."/></uri></xsl:template>
 
 	<xsl:template match="book-part">
-		<content_item component_type="" language="" level_sequence_number="1" publication_type="full_text" reference_distribution_opts="none">
+		<content_item component_type="chapter" language="de" level_sequence_number="1" publication_type="full_text" reference_distribution_opts="none">
 			<xsl:apply-templates select="contrib-group"/>
 			<xsl:variable name="fullTitle" as="xs:string?" select="(book-part-meta/title-group/title)[1]" />
 			<xsl:if test="not($fullTitle)"><xsl:message terminate="yes">Book full title is not available in the Input file</xsl:message></xsl:if>
@@ -181,10 +181,10 @@
 			<xsl:apply-templates select="edition"/>
 
 
-			<xsl:if test="../book-meta/book-id[@book-id-type='doi']">
+			<xsl:if test="../book-part-meta/book-part-id[@book-part-id-type='doi']">
 				<doi_data>
 					<doi>
-						<xsl:value-of select="../book-meta/book-id[@book-id-type='doi']"/>
+						<xsl:value-of select="../book-part-meta/book-part-id[@book-part-id-type='doi']"/>
 					</doi>
 				</doi_data>
 			</xsl:if>
