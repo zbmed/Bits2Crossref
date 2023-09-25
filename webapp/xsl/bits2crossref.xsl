@@ -66,7 +66,10 @@
 				<body>
 					<book>
 						<xsl:apply-templates select="//book-meta"/>
-						<xsl:apply-templates select="//ref-list"/>					
+						<xsl:apply-templates select="//book-part"/>
+
+						<xsl:apply-templates select="//ref-list"/>	
+
 					</book>
 				</body>
 			</doi_batch>
@@ -168,12 +171,36 @@
 	<xsl:template match="publisher-loc"><publisher_loc><xsl:value-of select="."/><xsl:apply-templates select="uri"/></publisher_loc></xsl:template>
 	<xsl:template match="publisher-loc/uri"><uri><xsl:value-of select="."/></uri></xsl:template>
 
+	<xsl:template match="book-part">
+		<content_item component_type="" language="" level_sequence_number="1" publication_type="full_text" reference_distribution_opts="none">
+			<xsl:apply-templates select="contrib-group"/>
+			<xsl:variable name="fullTitle" as="xs:string?" select="(book-part-meta/title-group/title)[1]" />
+			<xsl:if test="not($fullTitle)"><xsl:message terminate="yes">Book full title is not available in the Input file</xsl:message></xsl:if>
+			<titles><title><xsl:value-of select="$fullTitle"/></title></titles>
+
+			<xsl:apply-templates select="edition"/>
+
+
+			<xsl:if test="../book-meta/book-id[@book-id-type='doi']">
+				<doi_data>
+					<doi>
+						<xsl:value-of select="../book-meta/book-id[@book-id-type='doi']"/>
+					</doi>
+				</doi_data>
+			</xsl:if>
+			<xsl:apply-templates select="pub-date"/>
+			
+				
+		
+		</content_item>
+	</xsl:template>
+
 <!-- ========================================================================== -->
 <!-- Publication Date                                                           -->
 <!-- ========================================================================== -->
 
-	<xsl:template match="pub-date">
-		<xsl:variable name="mediaType" select="if (@pub-type=('epub', 'epub-ppub')) then 'online' else 'print'"/>
+	<xsl:template match="book-part/book-part-meta/pub-date">
+		<xsl:variable name="mediaType" select="if (@publication-format=('epub', 'epub-ppub')) then 'online' else 'print'"/>
 		<publication_date media_type="{ $mediaType }">
 			<xsl:apply-templates select="month"/>
 			<xsl:apply-templates select="day"/>
