@@ -6,7 +6,7 @@
       xmlns:xlink="http://www.w3.org/1999/xlink"
       xmlns:xi="http://www.w3.org/2001/XInclude"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      book-type="encyclopaedic-handbook"
+      book-type="monograph"
       dtd-version="2.1"
       xml:lang="de">
     <collection-meta>
@@ -63,7 +63,7 @@
             </contrib>
         </contrib-group>
         <isbn media_type="print">978-3-8474-2704-9</isbn>
-        <edition>Noch abzuklären, momentan als string eingfügt: edition?</edition>
+        <edition>Edition One</edition>
         <permissions>
             <license license-type="open-access"
                      xml:lang="de"

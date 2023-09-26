@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.3.6"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:crossref="http://crossref.org/crossref"
+           xmlns:fr="http://www.crossref.org/fundref.xsd"
+           xmlns:jatsFn="http://www.crossref.org/functions/jats"
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="4.3.6"
+           xsi:schemaLocation="http://www.crossref.org/schema/4.3.6 http://www.crossref.org/schema/deposit/crossref4.3.6.xsd">
+   <head>
+      <doi_batch_id>10.3224/84742704</doi_batch_id>
+      <timestamp>20230926133805</timestamp>
+      <depositor xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                 xmlns:xsldoc="http://www.bacman.net/XSLdoc">
+	<!-- depositor name  -->
+         <depositor_name>Barb</depositor_name>
+         <!-- depositor email  -->
+         <email_address>test@zbmed.de</email_address>
+      </depositor>
+      <registrant xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                  xmlns:xsldoc="http://www.bacman.net/XSLdoc">Barb</registrant>
+   </head>
+   <body>
+      <book book_type="monograph">
+         <book_metadata language="de">
+            <contributors>
+               <person_name sequence="first" contributor_role="author">
+                  <given_name>Christine M.</given_name>
+                  <surname>Klapeer</surname>
+               </person_name>
+               <person_name sequence="additional" contributor_role="author">
+                  <given_name>Johanna</given_name>
+                  <surname>Leinius</surname>
+               </person_name>
+               <person_name sequence="additional" contributor_role="author">
+                  <given_name>Franziska</given_name>
+                  <surname>Martinsen</surname>
+               </person_name>
+               <person_name sequence="additional" contributor_role="author">
+                  <given_name>Heike</given_name>
+                  <surname>Mauer</surname>
+               </person_name>
+               <person_name sequence="additional" contributor_role="author">
+                  <given_name>Inga</given_name>
+                  <surname>Nüthen</surname>
+               </person_name>
+            </contributors>
+            <titles>
+               <title>Handbuch Politik und Geschlecht</title>
+               <subtitle>Feministische, queere und intersektionelle Perspektiven</subtitle>
+            </titles>
+            <edition_number>Edition One</edition_number>
+            <doi_data>
+               <doi>10.3224/84742704</doi>
+               <timestamp>20230926133805</timestamp>
+            </doi_data>
+            <isbn media_type="print">978-3-8474-2704-9</isbn>
+         </book_metadata>
+         <content_item component_type="chapter"
+                       language="de"
+                       level_sequence_number="1"
+                       publication_type="full_text"
+                       reference_distribution_opts="none">
+            <titles>
+               <title>Materialistischer Feminismus</title>
+            </titles>
+            <doi_data>
+               <doi>10.3224/pg.2023.mffblyh.1-o</doi>
+               <timestamp>20230926133805</timestamp>
+            </doi_data>
+         </content_item>
+         <content_item component_type="other">
+            <citation_list>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Beier, Friederike/Yashodhara Haller, Lisa/Haneberg, Lea (2018): Plädoyer für einen materialistischen Feminismus. In: Beier, Friederike/Yashodhara Haller, Lisa/Haneberg, Lea (Hrsg.): Materializing feminism. Positionierungen zu Ökonomie, Staat und Identität. Münster: Unrast , S. 7–15.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Bereswill, Mechthild/Neuber, Anke (2012): Zur Bedeutung von Tätigkeit im Kontext gesellschaftlicher Prekarisierungsprozesse. In: Bereswill, Mechthild u.a. (Hrsg.): Wechselverhältnisse im Wohlfahrtsstaat: Dynamiken gesellschaftlicher Justierungsprozesse. Münster: Westfälisches Dampfboot , S. 158–175.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Butler, Judith (1990): Das Unbehagen der Geschlechter. Frankfurt am Main: Suhrkamp.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Dalla Costa, Mariarosa (1973): Die Frauen und der Umsturz der Gesellschaft. In: Dalla Costa, Mariarosa/James, Selma (Hrsg.): Die Macht der Frauen und der Umsturz der Gesellschaft. Berlin: Merve Verlag , S. 27–67.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Delphy, Christine (1984): Close to home: a materialist analysis of women’s oppression. Amherst: University of Massachusetts Press.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Demirović, Alex/Adolphs, Stephan/Karakayali, Serhat (Hrsg.) (2010): Das Staatsverständnis von Nicos Poulantzas: der Staat als gesellschaftliches Verhältnis. 1. Aufl. Staatsverständnisse (Bd. 30). Baden-Baden: Nomos.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Ferguson, Susan (2016): Intersectionality and Social-Reproduction Feminisms: Toward an Integrative Ontology. In: Historical Materialism 24, S. 38–60.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Frederici, Silvia (2021): Revolution at point zero. Hausarbeit, Reproduktion und feministischer Kampf. Münster: Unrast.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Hartsock, Nancy C. M. (1983): The Feminist Standpoint: Developing the Ground for a Specifically Feminist Historical Materialism. In: Harding, Sandra/Hintikka, Merrill B. (Hrsg.): Discovering Reality: Feminist perspectives on epistemology, metaphysics, methodology, and philosophy of science. Synthese Library Boston: Cambridge University Press , S. 283–310.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Haug, Frigga (2008): Die Vier-in-einem-Perspektive. Politik von Frauen für eine neue Linke. Hamburg: Argument.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Haug, Frigga (2015): Der im Gehen erkundete Weg. Marxismus-Feminismus. In: Haug, Frigga/May, Ruth (Hrsg.): Wege des Marxismus-Feminismus. Das Argument (314 = 57. Jahrgang, Heft 4/5/2015) Hamburg: Argument-Verlag mit Ariadne.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Hennessy, Rosemary (1990): Materialist Feminism and Foucault: The Politics of Appropriation. In: Rethinking Marxism 3, S. 251–274.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Hennessy, Rosemary/Ingraham, Chrys (Hrsg.) (1997): Materialist feminism: a reader in class, difference, and women’s lives. New York: Routledge.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Krebs, Hans-Peter/Sablowski, Thomas (1994): Ökonomie als soziale Regularisierung. In: Demirovoc, Alex/Krebs, Hans-Peter/Sablowski, Thomas (Hrsg.): Hegemonie und Staat. Kapitalistische Regulation als Projekt und Prozess. Münster: Westfälisches Dampfboot , S. 104–127.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Kuhn, Annette/Wolpe, Ann-Marie (Hrsg.) (1978): Feminism and materialism: women and modes of production. London: Routledge.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Ludwig, Gundula/Sauer, Birgit (2010): Engendering Poulantzas oder: Sinn und Zweck feministischer Anrufung materialistischer Staatstheorie. In: Demirović, Alex/Adolphs, Stephan/Karakayali, Serhat (Hrsg.): Das Staatsverständnis von Nicos Poulantzas: der Staat als gesellschaftliches Verhältnis. Staatsverständnisse (Bd. 30) Baden-Baden: Nomos , S. 173–188.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Lugones, María (2007): Heterosexualism and the Colonial/Modern Gender System. In: Hypatia 22, S. 186–219.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Marx, Karl (1961): Zur Kritik der politischen Ökonomie (MEW 13). Berlin: Dietz.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Marx, Karl (1962): Das Kapital. Kritik der Politischen Ökonomie (MEW 23). Berlin: Dietz.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Marx, Karl/Engels, Friedrich (1848): Manifest der kommunistischen Partei. London: Office der Bildungs-Gesellschaft für Arbeiter von JE Burghard.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Meißner, Hanna (2003): Zu den gesellschaftlich-historischen Bedingungen sozialer Konstruktion von ,Geschlecht’. In: Gerlach, Olaf/Kalmring, Stefan/Nowak, Andreas (Hrsg.): Mit Marx ins 21. Jahrhundert. Zur Aktualität der Kritik der politischen Ökonomie. Hamburg: VSA-Verlag , S. 206–221.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Meißner, Hanna (2008): Die soziale Konstruktion von Geschlecht – Erkenntnisperspektiven und gesellschaftliche Fragen. Online unter http://web.fu-berlin.de [Zugriff: 20.03.2022].</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Mies, Maria (1988): Patriarchat und Kapital. Frauen in der internationalen Arbeitsteilung. Vollständig durchgesehene und durch ein aktuelles Vorwort erweiterte Ausgabe. Zürich: Rotpunktverlag.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Mojab, Shahrzad/Carpenter, Sara (2019): Marxism, feminism, and “intersectionality”. In: Journal of Labor and Society 22, S. 275–282.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Redaktion, Prokla (2014): Editorial: Materialistischer Feminismus. In: PROKLA. Zeitschrift für kritische Sozialwissenschaft 44, S. 2–10.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Said, Edward W. (1975): The Text, the World, the Critic. In: The Bulletin of the Midwest Modern Language Association 8, S. 1–23.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Scholz, Roswitha (2011): Das Geschlecht des Kapitalismus. Feministische Theorien und die postmoderne Metamorphose des Patriarchats. Verbesserte und erweiterte Neuausgabe. Bad Honnef: Horlemann.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Seccombe, Wally (1974): The housewife and her labour under capitalism. In: New Left Review I/83.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Trouble Everyday Collective (2014): Die Krise der sozialen Reproduktion. Kritik, Perspektiven, Strategien und Utopien. Münster: Unrast-Verlag.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Wittig, Monique (1992): One is not born a women 1981. In: The Straight Mind and Other Essays. London, New York: Harvester Wheatsheaf , S. 9–20.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Yashodhara Haller, Lisa (2018): Elternschaft im Kapitalismus. Staatliche Einflussfaktoren auf die Arbeitsteilung junger Eltern. Reihe „Politik der Geschlechterverhältnisse“ (Band 57). Frankfurt am Main/New York: Campus.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Yashodhara Haller, Lisa (2022): Politiken der Reproduktionssicherung. Die Funktion staatlicher Steuerung für die Entstehung und Erhaltung menschlichen Lebens. In: Fröhlich, Marie/Schütz, Ronja/Wolf, Katharina (Hrsg.): Politiken der Reproduktion. Umkämpfte Forschungsperspektiven und Praxisfelder. Bielefeld: transcript Verlag , S. 83–98.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Delphy, Christine (1984): For a materialist feminism. In: Close to Home: a materialist analysis of women‘s oppression. Amherst: University of Massachusetts Press, 211-219.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Wittig, Monique (1992): One Is Not Born a Woman 1981. In: The Straight Mind and Other Essays. By Monique Wittig. London and New York: Harvester Wheatsheaf, 9-20.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Haller, Lisa Yashodhara (2018): Kapital – Staat – Geschlecht. Eine theoretische Analyse der Vermittlungszusammenhänge. In: Friederike Beier et al. (Hrsg.): materializing feminism. Positionierungen zu Ökonomie, Staat und Identität. Münster: Unrast Verlag, 61-48.</unstructured_citation>
+               </citation>
+            </citation_list>
+         </content_item>
+         <content_item component_type="other">
+            <citation_list>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Beier, Friederike/Yashodhara Haller, Lisa/Haneberg, Lea (2018): Plädoyer für einen materialistischen Feminismus. In: Beier, Friederike/Yashodhara Haller, Lisa/Haneberg, Lea (Hrsg.): Materializing feminism. Positionierungen zu Ökonomie, Staat und Identität. Münster: Unrast , S. 7–15.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Bereswill, Mechthild/Neuber, Anke (2012): Zur Bedeutung von Tätigkeit im Kontext gesellschaftlicher Prekarisierungsprozesse. In: Bereswill, Mechthild u.a. (Hrsg.): Wechselverhältnisse im Wohlfahrtsstaat: Dynamiken gesellschaftlicher Justierungsprozesse. Münster: Westfälisches Dampfboot , S. 158–175.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Butler, Judith (1990): Das Unbehagen der Geschlechter. Frankfurt am Main: Suhrkamp.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Dalla Costa, Mariarosa (1973): Die Frauen und der Umsturz der Gesellschaft. In: Dalla Costa, Mariarosa/James, Selma (Hrsg.): Die Macht der Frauen und der Umsturz der Gesellschaft. Berlin: Merve Verlag , S. 27–67.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Delphy, Christine (1984): Close to home: a materialist analysis of women’s oppression. Amherst: University of Massachusetts Press.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Demirović, Alex/Adolphs, Stephan/Karakayali, Serhat (Hrsg.) (2010): Das Staatsverständnis von Nicos Poulantzas: der Staat als gesellschaftliches Verhältnis. 1. Aufl. Staatsverständnisse (Bd. 30). Baden-Baden: Nomos.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Ferguson, Susan (2016): Intersectionality and Social-Reproduction Feminisms: Toward an Integrative Ontology. In: Historical Materialism 24, S. 38–60.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Frederici, Silvia (2021): Revolution at point zero. Hausarbeit, Reproduktion und feministischer Kampf. Münster: Unrast.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Hartsock, Nancy C. M. (1983): The Feminist Standpoint: Developing the Ground for a Specifically Feminist Historical Materialism. In: Harding, Sandra/Hintikka, Merrill B. (Hrsg.): Discovering Reality: Feminist perspectives on epistemology, metaphysics, methodology, and philosophy of science. Synthese Library Boston: Cambridge University Press , S. 283–310.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Haug, Frigga (2008): Die Vier-in-einem-Perspektive. Politik von Frauen für eine neue Linke. Hamburg: Argument.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Haug, Frigga (2015): Der im Gehen erkundete Weg. Marxismus-Feminismus. In: Haug, Frigga/May, Ruth (Hrsg.): Wege des Marxismus-Feminismus. Das Argument (314 = 57. Jahrgang, Heft 4/5/2015) Hamburg: Argument-Verlag mit Ariadne.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Hennessy, Rosemary (1990): Materialist Feminism and Foucault: The Politics of Appropriation. In: Rethinking Marxism 3, S. 251–274.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Hennessy, Rosemary/Ingraham, Chrys (Hrsg.) (1997): Materialist feminism: a reader in class, difference, and women’s lives. New York: Routledge.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Krebs, Hans-Peter/Sablowski, Thomas (1994): Ökonomie als soziale Regularisierung. In: Demirovoc, Alex/Krebs, Hans-Peter/Sablowski, Thomas (Hrsg.): Hegemonie und Staat. Kapitalistische Regulation als Projekt und Prozess. Münster: Westfälisches Dampfboot , S. 104–127.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Kuhn, Annette/Wolpe, Ann-Marie (Hrsg.) (1978): Feminism and materialism: women and modes of production. London: Routledge.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Ludwig, Gundula/Sauer, Birgit (2010): Engendering Poulantzas oder: Sinn und Zweck feministischer Anrufung materialistischer Staatstheorie. In: Demirović, Alex/Adolphs, Stephan/Karakayali, Serhat (Hrsg.): Das Staatsverständnis von Nicos Poulantzas: der Staat als gesellschaftliches Verhältnis. Staatsverständnisse (Bd. 30) Baden-Baden: Nomos , S. 173–188.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Lugones, María (2007): Heterosexualism and the Colonial/Modern Gender System. In: Hypatia 22, S. 186–219.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Marx, Karl (1961): Zur Kritik der politischen Ökonomie (MEW 13). Berlin: Dietz.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Marx, Karl (1962): Das Kapital. Kritik der Politischen Ökonomie (MEW 23). Berlin: Dietz.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Marx, Karl/Engels, Friedrich (1848): Manifest der kommunistischen Partei. London: Office der Bildungs-Gesellschaft für Arbeiter von JE Burghard.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Meißner, Hanna (2003): Zu den gesellschaftlich-historischen Bedingungen sozialer Konstruktion von ,Geschlecht’. In: Gerlach, Olaf/Kalmring, Stefan/Nowak, Andreas (Hrsg.): Mit Marx ins 21. Jahrhundert. Zur Aktualität der Kritik der politischen Ökonomie. Hamburg: VSA-Verlag , S. 206–221.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Meißner, Hanna (2008): Die soziale Konstruktion von Geschlecht – Erkenntnisperspektiven und gesellschaftliche Fragen. Online unter http://web.fu-berlin.de [Zugriff: 20.03.2022].</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Mies, Maria (1988): Patriarchat und Kapital. Frauen in der internationalen Arbeitsteilung. Vollständig durchgesehene und durch ein aktuelles Vorwort erweiterte Ausgabe. Zürich: Rotpunktverlag.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Mojab, Shahrzad/Carpenter, Sara (2019): Marxism, feminism, and “intersectionality”. In: Journal of Labor and Society 22, S. 275–282.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Redaktion, Prokla (2014): Editorial: Materialistischer Feminismus. In: PROKLA. Zeitschrift für kritische Sozialwissenschaft 44, S. 2–10.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Said, Edward W. (1975): The Text, the World, the Critic. In: The Bulletin of the Midwest Modern Language Association 8, S. 1–23.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Scholz, Roswitha (2011): Das Geschlecht des Kapitalismus. Feministische Theorien und die postmoderne Metamorphose des Patriarchats. Verbesserte und erweiterte Neuausgabe. Bad Honnef: Horlemann.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Seccombe, Wally (1974): The housewife and her labour under capitalism. In: New Left Review I/83.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Trouble Everyday Collective (2014): Die Krise der sozialen Reproduktion. Kritik, Perspektiven, Strategien und Utopien. Münster: Unrast-Verlag.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Wittig, Monique (1992): One is not born a women 1981. In: The Straight Mind and Other Essays. London, New York: Harvester Wheatsheaf , S. 9–20.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Yashodhara Haller, Lisa (2018): Elternschaft im Kapitalismus. Staatliche Einflussfaktoren auf die Arbeitsteilung junger Eltern. Reihe „Politik der Geschlechterverhältnisse“ (Band 57). Frankfurt am Main/New York: Campus.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Yashodhara Haller, Lisa (2022): Politiken der Reproduktionssicherung. Die Funktion staatlicher Steuerung für die Entstehung und Erhaltung menschlichen Lebens. In: Fröhlich, Marie/Schütz, Ronja/Wolf, Katharina (Hrsg.): Politiken der Reproduktion. Umkämpfte Forschungsperspektiven und Praxisfelder. Bielefeld: transcript Verlag , S. 83–98.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Delphy, Christine (1984): For a materialist feminism. In: Close to Home: a materialist analysis of women‘s oppression. Amherst: University of Massachusetts Press, 211-219.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Wittig, Monique (1992): One Is Not Born a Woman 1981. In: The Straight Mind and Other Essays. By Monique Wittig. London and New York: Harvester Wheatsheaf, 9-20.</unstructured_citation>
+               </citation>
+               <citation key="key20230926133805_">
+                  <unstructured_citation>Haller, Lisa Yashodhara (2018): Kapital – Staat – Geschlecht. Eine theoretische Analyse der Vermittlungszusammenhänge. In: Friederike Beier et al. (Hrsg.): materializing feminism. Positionierungen zu Ökonomie, Staat und Identität. Münster: Unrast Verlag, 61-48.</unstructured_citation>
+               </citation>
+            </citation_list>
+         </content_item>
+      </book>
+   </body>
+</doi_batch>

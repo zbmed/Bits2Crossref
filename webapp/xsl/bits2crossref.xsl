@@ -30,12 +30,13 @@
 
 	<!-- One of these two fields must be populated -->
 <crossref:metadata>
-	
+	<depositor>
+	<!-- depositor name  -->
+	<depositor_name>Barb</depositor_name>
 	<!-- depositor email  -->
 	<email_address>test@zbmed.de</email_address>
-	<!-- depositor name  -->
-	<depositor>Barb</depositor>
-
+</depositor>
+<registrant>Barb</registrant>
 	
 </crossref:metadata>
 
@@ -65,18 +66,19 @@
 			<doi_batch version="4.3.6">
 					<xsl:attribute name="xsi:schemaLocation">http://www.crossref.org/schema/4.3.6 http://www.crossref.org/schema/deposit/crossref4.3.6.xsd</xsl:attribute>
 				<head>
-				<timestamp>
-			<xsl:value-of select="$datetime"/>
-		</timestamp>
+				
 					<xsl:apply-templates select="//front"/>
 					<doi_batch_id>
 			<xsl:value-of select="//book-meta/book-id[@book-id-type='doi']" />
 		</doi_batch_id>
+		<timestamp>
+			<xsl:value-of select="$datetime"/>
+		</timestamp>
 						<xsl:copy-of select="document('')/*/crossref:metadata/*"/>
 
 			</head>
 				<body>
-					<book>
+					<book book_type="monograph">
 						<xsl:apply-templates select="//book-meta"/>
 						<xsl:apply-templates select="//book-part"/>
 
@@ -147,15 +149,18 @@
 
 			<xsl:apply-templates select="edition"/>
 
-
+			<xsl:apply-templates select="pub-date"/>
 			<xsl:if test="../book-meta/book-id[@book-id-type='doi']">
 				<doi_data>
 					<doi>
 						<xsl:value-of select="../book-meta/book-id[@book-id-type='doi']"/>
 					</doi>
+					<timestamp>
+			<xsl:value-of select="$datetime"/>
+		</timestamp>
 				</doi_data>
 			</xsl:if>
-			<xsl:apply-templates select="pub-date"/>
+			
 			
 			<xsl:if test="not(isbn)"><xsl:message terminate="yes">Book ISBN is not available in the Input file</xsl:message></xsl:if>
 				
@@ -193,15 +198,18 @@
 
 			<xsl:apply-templates select="edition"/>
 
-
+			<xsl:apply-templates select="pub-date"/>
 			<xsl:if test="book-part-meta/book-part-id[@book-part-id-type='doi']">
 				<doi_data>
 					<doi>
 						<xsl:value-of select="book-part-meta/book-part-id[@book-part-id-type='doi']"/>
 					</doi>
+					<timestamp>
+			<xsl:value-of select="$datetime"/>
+		</timestamp>
 				</doi_data>
 			</xsl:if>
-			<xsl:apply-templates select="pub-date"/>
+			
 			
 				
 		
@@ -212,7 +220,7 @@
 <!-- Publication Date                                                           -->
 <!-- ========================================================================== -->
 
-	<xsl:template match="book-part/book-part-meta/pub-date">
+	<xsl:template match="pub-date">
 		<xsl:variable name="mediaType" select="if (@publication-format=('epub', 'epub-ppub')) then 'online' else 'print'"/>
 		<publication_date media_type="{ $mediaType }">
 			<xsl:apply-templates select="month"/>
@@ -284,9 +292,11 @@
 <!-- Citations                                                                  -->
 <!-- ========================================================================== -->
 <xsl:template match="ref-list">
+<content_item component_type="other">
 	<citation_list>
 		<xsl:apply-templates select="//ref"/>
 	</citation_list>
+</content_item>
 </xsl:template>
 
 
