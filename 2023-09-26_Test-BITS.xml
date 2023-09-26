@@ -11,7 +11,7 @@
 		</publisher>
 	</collection-meta>
 	<book-meta>
-		<book-id>10.3224</book-id>
+		<book-id book-id-type="doi">10.3224/84742704</book-id>
 		<book-title-group>
 			<book-title>Handbuch Politik und Geschlecht</book-title>
 			<subtitle xml:lang="de">Feministische, queere und intersektionelle Perspektiven</subtitle>
@@ -48,7 +48,20 @@
 				</name>
 			</contrib>
 		</contrib-group>
-		<isbn publication-format="print">ISSN</isbn>
+		<isbn publication-format="print">978-3-8474-2704-9</isbn>
+		<pub-date publication-format="electronic" date-type="pub"
+					iso-8601-date="2023-08-31">
+					<year>2023</year>
+					<month>08</month>
+					<day>31</day>
+				</pub-date>
+				<pub-date publication-format="print"
+                          date-type="pub"
+                          iso-8601-date="2023-12-16">
+                    <day>16</day>
+                    <month>12</month>
+                    <year>2023</year>
+                </pub-date>
 		<edition>1. Auflage</edition>
 		<permissions>
 			<license license-type="open-access" xml:lang="de" xlink:href="https://creativecommons.org/licenses/by/4.0">

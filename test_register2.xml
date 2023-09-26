@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/5.3.1"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:crossref="http://crossref.org/crossref"
+           xmlns:fr="http://www.crossref.org/fundref.xsd"
+           xmlns:jatsFn="http://www.crossref.org/functions/jats"
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           version="5.3.1"
+           xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schema/deposit/crossref5.3.1.xsd">
+   <head>
+      <doi_batch_id>10.3224/84742704</doi_batch_id>
+      <timestamp>20230926161422</timestamp>
+      <depositor xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                 xmlns:xsldoc="http://www.bacman.net/XSLdoc">
+	<!-- depositor name  -->
+         <depositor_name>Barb</depositor_name>
+         <!-- depositor email  -->
+         <email_address>test@zbmed.de</email_address>
+      </depositor>
+      <registrant xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                  xmlns:xsldoc="http://www.bacman.net/XSLdoc">Barb</registrant>
+   </head>
+   <body>
+      <book book_type="monograph">
+         <book_metadata language="de">
+            <contributors>
+               <person_name sequence="first" contributor_role="author">
+                  <given_name>Christine M.</given_name>
+                  <surname>Klapeer</surname>
+               </person_name>
+               <person_name sequence="additional" contributor_role="author">
+                  <given_name>Johanna</given_name>
+                  <surname>Leinius</surname>
+               </person_name>
+               <person_name sequence="additional" contributor_role="author">
+                  <given_name>Franziska</given_name>
+                  <surname>Martinsen</surname>
+               </person_name>
+               <person_name sequence="additional" contributor_role="author">
+                  <given_name>Heike</given_name>
+                  <surname>Mauer</surname>
+               </person_name>
+               <person_name sequence="additional" contributor_role="author">
+                  <given_name>Inga</given_name>
+                  <surname>Nüthen</surname>
+               </person_name>
+            </contributors>
+            <titles>
+               <title>Handbuch Politik und Geschlecht</title>
+               <subtitle>Feministische, queere und intersektionelle Perspektiven</subtitle>
+            </titles>
+            <edition_number>1. Auflage</edition_number>
+            <publication_date media_type="online">
+               <month>08</month>
+               <day>31</day>
+               <year>2023</year>
+            </publication_date>
+            <publication_date media_type="print">
+               <month>12</month>
+               <day>16</day>
+               <year>2023</year>
+            </publication_date>
+            <isbn media_type="print">978-3-8474-2704-9</isbn>
+            <publisher>
+               <publisher_name>Verlag Barbara Budrich</publisher_name>
+            </publisher>
+            <doi_data>
+               <doi>10.3224/84742704</doi>
+               <resource>http://zbmed.de/test</resource>
+               <collection property="unspecified"/>
+            </doi_data>
+         </book_metadata>
+         <content_item component_type="chapter"
+                       language="de"
+                       level_sequence_number="1"
+                       publication_type="full_text"
+                       reference_distribution_opts="none">
+            <titles>
+               <title>Materialistischer Feminismus</title>
+            </titles>
+            <doi_data>
+               <doi>10.3224/pg.2023.mffblyh.1-o</doi>
+               <timestamp>20230926161422</timestamp>
+               <resource>http://zbmed.de/test</resource>
+            </doi_data>
+         </content_item>
+      </book>
+   </body>
+</doi_batch>

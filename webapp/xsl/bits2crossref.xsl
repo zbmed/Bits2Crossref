@@ -14,7 +14,7 @@
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
                 xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-				xmlns="http://www.crossref.org/schema/4.3.6"
+				xmlns="http://www.crossref.org/schema/5.3.1"
 				xmlns:xsldoc="http://www.bacman.net/XSLdoc" 
 				xmlns:xlink="http://www.w3.org/1999/xlink" 
 				xmlns:fr="http://www.crossref.org/fundref.xsd"
@@ -63,8 +63,8 @@
 	<xsl:choose>
 		
 		<xsl:when test="book">
-			<doi_batch version="4.3.6">
-					<xsl:attribute name="xsi:schemaLocation">http://www.crossref.org/schema/4.3.6 http://www.crossref.org/schema/deposit/crossref4.3.6.xsd</xsl:attribute>
+			<doi_batch version="5.3.1">
+					<xsl:attribute name="xsi:schemaLocation">http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schema/deposit/crossref5.3.1.xsd</xsl:attribute>
 				<head>
 				
 					<xsl:apply-templates select="//front"/>
@@ -150,22 +150,23 @@
 			<xsl:apply-templates select="edition"/>
 
 			<xsl:apply-templates select="pub-date"/>
+			
+			
+			
+			<xsl:if test="not(isbn)"><noisbn/></xsl:if>
+				
+			<xsl:apply-templates select="isbn"/>
+			<xsl:apply-templates select="publisher"/>
+			<publisher><publisher_name><xsl:value-of select="../collection-meta/publisher/publisher-name"/></publisher_name></publisher>
 			<xsl:if test="../book-meta/book-id[@book-id-type='doi']">
 				<doi_data>
 					<doi>
 						<xsl:value-of select="../book-meta/book-id[@book-id-type='doi']"/>
 					</doi>
-					<timestamp>
-			<xsl:value-of select="$datetime"/>
-		</timestamp>
+					<resource><xsl:text>http://zbmed.de/test</xsl:text></resource>
+					<collection property="unspecified"/>
 				</doi_data>
 			</xsl:if>
-			
-			
-			<xsl:if test="not(isbn)"><xsl:message terminate="yes">Book ISBN is not available in the Input file</xsl:message></xsl:if>
-				
-			<xsl:apply-templates select="isbn"/>
-			<xsl:apply-templates select="publisher"/>
 		</book_metadata>
 	</xsl:template>
 
@@ -207,6 +208,7 @@
 					<timestamp>
 			<xsl:value-of select="$datetime"/>
 		</timestamp>
+		<resource><xsl:text>http://zbmed.de/test</xsl:text></resource>
 				</doi_data>
 			</xsl:if>
 			
@@ -221,7 +223,7 @@
 <!-- ========================================================================== -->
 
 	<xsl:template match="pub-date">
-		<xsl:variable name="mediaType" select="if (@publication-format=('epub', 'epub-ppub')) then 'online' else 'print'"/>
+		<xsl:variable name="mediaType" select="if (@publication-format=('electronic', 'epub', 'epub-ppub')) then 'online' else 'print'"/>
 		<publication_date media_type="{ $mediaType }">
 			<xsl:apply-templates select="month"/>
 			<xsl:apply-templates select="day"/>
