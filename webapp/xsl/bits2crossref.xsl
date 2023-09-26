@@ -20,6 +20,8 @@
 				xmlns:fr="http://www.crossref.org/fundref.xsd"
 				xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
         		xmlns:jatsFn="http://www.crossref.org/functions/jats"
+				xmlns:crossref="http://crossref.org/crossref"
+
 				exclude-result-prefixes="xsldoc">
 
 <xsl:output method="xml" 
@@ -27,22 +29,25 @@
             encoding="UTF-8"/>
 
 	<!-- One of these two fields must be populated -->
-	<xsl:param name="metaContents" as="node()*" >
-	<meta>
-<!-- depositor email  -->
-<email_address>##Email_Address##</email_address>
-<!-- depositor name  -->
-<depositor>##Depositor_Name##</depositor>
+<crossref:metadata>
+	
+	<!-- depositor email  -->
+	<email_address>test@zbmed.de</email_address>
+	<!-- depositor name  -->
+	<depositor>Barb</depositor>
 
-</meta>
-	</xsl:param>
+	
+</crossref:metadata>
 
-	<xsl:param name="meta" as="xs:string" select="'input.meta.xml'"/>
+ <xsl:param name="metaContents" as="node()*" />
+
+
+	<xsl:param name="meta" as="xs:string" select="''"/>
 	<xsl:variable name="metafile">
 		<xsl:if test="empty($metaContents) and $meta=''">
 			<xsl:message terminate="yes">Must specify meta information - either as a nodeset in 'metaContents' or as a filename via 'meta'</xsl:message>
 		</xsl:if>
-		<xsl:sequence select="if (not(empty($metaContents))) then $metaContents else document($meta)"/>
+		<xsl:sequence select="if (not(empty($metaContents))) then $metaContents else document('')/*/crossref:metadata/*"/>
 	</xsl:variable>
 
 <xsl:variable name="date" select="adjust-date-to-timezone(current-date(), ())"/>
@@ -60,8 +65,15 @@
 			<doi_batch version="4.3.6">
 					<xsl:attribute name="xsi:schemaLocation">http://www.crossref.org/schema/4.3.6 http://www.crossref.org/schema/deposit/crossref4.3.6.xsd</xsl:attribute>
 				<head>
+				<timestamp>
+			<xsl:value-of select="$datetime"/>
+		</timestamp>
 					<xsl:apply-templates select="//front"/>
-					
+					<doi_batch_id>
+			<xsl:value-of select="//book-meta/book-id[@book-id-type='doi']" />
+		</doi_batch_id>
+						<xsl:copy-of select="document('')/*/crossref:metadata/*"/>
+
 			</head>
 				<body>
 					<book>
@@ -96,7 +108,7 @@
 		</timestamp>
 		<depositor>
 			<depositor_name>
-				<xsl:sequence select="(//book-meta/publisher/publisher-name/string(), $noPublisherNameComment)[1]"/>
+				<xsl:sequence select="(document('')/*/crossref:metadata/meta/publisher-name/string(), $noPublisherNameComment)[1]"/>
 			</depositor_name>
 			<email_address>
 				<xsl:sequence select="($metafile/meta/email_address/string(), $noEmailAddressComment)[1]"/>
@@ -104,7 +116,7 @@
 		</depositor>
 		<registrant>
 			<xsl:sequence select="($metafile/meta/depositor/string(), //book-meta/publisher/publisher-name/string(), $noPublisherNameComment)[1]"/>
-		</registrant>
+		</registrant> 
 	</xsl:template>
 
 	<xsl:function name="jatsFn:findDoiBatchId" as="xs:string?">
@@ -126,11 +138,12 @@
 <!-- BITS Book Metadata Element                                                   -->
 <!-- ========================================================================== -->
 	<xsl:template match="book-meta">
-		<book_metadata language="en">
+		<book_metadata language="de">
 			<xsl:apply-templates select="contrib-group"/>
 			<xsl:variable name="fullTitle" as="xs:string?" select="(book-title-group/book-title, book-title, book-id)[1]" />
 			<xsl:if test="not($fullTitle)"><xsl:message terminate="yes">Book full title is not available in the Input file</xsl:message></xsl:if>
-			<titles><title><xsl:value-of select="$fullTitle"/></title></titles>
+			<titles><title><xsl:value-of select="$fullTitle"/></title>
+			<subtitle><xsl:value-of select="book-title-group/subtitle"/></subtitle></titles>
 
 			<xsl:apply-templates select="edition"/>
 

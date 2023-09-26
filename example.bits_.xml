@@ -24,7 +24,8 @@
         </publisher>
     </collection-meta>
     <book-meta>
-        <book-id>10.3224</book-id>
+       <book-id book-id-type="publisher">10.3224</book-id>
+		<book-id book-id-type="doi">10.3224/84742704</book-id>
         <book-title-group>
             <book-title>Handbuch Politik und Geschlecht</book-title>
             <subtitle>Feministische, queere und intersektionelle Perspektiven</subtitle>
