@@ -2,20 +2,23 @@
 
 _local_
 
+To use the transformation engine with the provided stylesheets:
 
-1. Make sure you have docker installed and running.
+1. Use Git and `git clone https://github.com/zbmed/Bits2Crossref.git` 
+
+2. Make sure you have docker installed and running.
 
     `docker -v`
 
     `docker ps`
 
-2. Then use this command to pull and run the docker container:
+3. Then use this command to pull and run the docker container.
 
     `docker build . --pull -t bits:crossref`
 
     `docker run --pull=always -p 1984:1984 -p 8984:8984 bits:crossref`
 
-3. Open a browser and go to:
+4. Open a browser and go to:
 
     [http://admin:admin@localhost:8984/rest?run=form.html](http://admin:admin@localhost:8984/rest?run=form.html)
 
