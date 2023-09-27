@@ -28,15 +28,15 @@
             indent="yes" 
             encoding="UTF-8"/>
 
-	<!-- One of these two fields must be populated -->
+	
 <crossref:metadata>
 	<depositor>
 	<!-- depositor name  -->
-	<depositor_name>Barb</depositor_name>
+	<depositor_name>###depositor_name###</depositor_name>
 	<!-- depositor email  -->
-	<email_address>test@zbmed.de</email_address>
+	<email_address>###depositor_email###</email_address>
 </depositor>
-<registrant>Barb</registrant>
+<registrant>###registrant###</registrant>
 	
 </crossref:metadata>
 
